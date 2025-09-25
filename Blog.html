@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Блог — IT-школа «Код в Туле»</title>
+  <meta name="description" content="Полезные статьи о программировании для детей и взрослых: выбор языка, подготовка к ЕГЭ, сравнение курсов, карьера в IT. Бесплатный пробный урок в Туле!">
+  <style>
+    /* Общие стили */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fafafa;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #4f46e5;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #4338ca;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #1e1b4b;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    /* Шапка */
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #4f46e5;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: #4b5563;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #4f46e5;
+    }
+
+    /* Блог */
+    .blog-posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .blog-post {
+      background: white;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-post h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #1e1b4b;
+    }
+
+    .blog-post-meta {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    /* Преимущества */
+    .benefits {
+      background: #f9fafb;
+    }
+
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .benefit-item {
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Контакты */
+    .contact {
+      background: white;
+      text-align: center;
+    }
+
+    /* Футер */
+    footer {
+      background: #1e1b4b;
+      color: white;
+      padding: 40px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-column h3 {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      color: white;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column a {
+      color: #cbd5e1;
+      transition: color 0.2s;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #374151;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Код в Туле</div>
+      <nav class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/dlya-detej/">Для детей</a>
+        <a href="/dlya-vzroslyh/">Для взрослых</a>
+        <a href="/napravleniya/">Направления</a>
+        <a href="/kak-stat-programmistom/">Как стать программистом</a>
+        <a href="#kontakty">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Заголовок -->
+  <section class="hero" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 80px 0; text-align: center;">
+    <div class="container">
+      <h1>Блог</h1>
+      <p>Полезные статьи о программировании для школьников, студентов и взрослых: выбор языка, подготовка к ЕГЭ, карьера в IT и сравнение курсов.</p>
+      <a href="#besplatnyy-urok" class="btn" style="margin-top: 24px;">Попробовать бесплатно</a>
+    </div>
+  </section>
+
+  <!-- Статьи -->
+  <section class="blog">
+    <div class="container">
+      <h2>Последние статьи</h2>
+      <div class="blog-posts">
+        <div class="blog-post">
+          <div class="blog-post-meta">12 сентября 2025</div>
+          <h3>Python или Java для школьника?</h3>
+          <p>Сравниваем два самых популярных языка для подростков: плюсы, минусы, олимпиады и перспективы. Какой выбрать в 12, 14 или 16 лет?</p>
+          <a href="/blog/python-ili-java/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+        <div class="blog-post">
+          <div class="blog-post-meta">5 сентября 2025</div>
+          <h3>Подготовка к ЕГЭ по информатике</h3>
+          <p>Как эффективно готовиться к задачам на программирование, алгоритмы и базы данных. Советы от преподавателей с опытом подготовки стобалльников.</p>
+          <a href="/blog/ege-informatika/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+        <div class="blog-post">
+          <div class="blog-post-meta">28 августа 2025</div>
+          <h3>Бесплатные курсы vs платные</h3>
+          <p>Stepik, Яндекс Практикум или IT-школа? Анализ эффективности, времени и результата. Когда стоит инвестировать в обучение, а когда хватит бесплатных ресурсов.</p>
+          <a href="/blog/besplatnye-ili-platnye/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+        <div class="blog-post">
+          <div class="blog-post-meta">20 августа 2025</div>
+          <h3>Как выбрать первый язык программирования</h3>
+          <p>Разбираем популярные языки (Python, JavaScript, Java, C++) по простоте, востребованности и целям: хобби, карьера, олимпиады, ЕГЭ.</p>
+          <a href="/blog/kak-vybrat-yazyk/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+        <div class="blog-post">
+          <div class="blog-post-meta">12 августа 2025</div>
+          <h3>Что сдавать на программиста в 2025 году?</h3>
+          <p>Какие экзамены нужны для поступления в вузы на IT-специальности. Какие предметы важны, какие вузы в Туле и Москве принимают профильную информатику.</p>
+          <a href="/blog/chto-sdavat-na-programmista/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+        <div class="blog-post">
+          <div class="blog-post-meta">5 августа 2025</div>
+          <h3>Сколько учиться на программиста?</h3>
+          <p>Сравнение: колледж (3–4 года), вуз (4–5 лет), курсы (3–12 месяцев). Плюсы и минусы каждого пути в зависимости от ваших целей.</p>
+          <a href="/blog/skolko-uchitsya-na-programmista/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="benefits">
+    <div class="container">
+      <h2>Почему читают наш блог?</h2>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <h3>Без воды</h3>
+          <p>Только проверенная информация, основанная на опыте преподавателей и аналитике запросов.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Для всех возрастов</h3>
+          <p>Статьи адаптированы под школьников, студентов и взрослых, которые только начинают путь в IT.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Практическая польза</h3>
+          <p>Каждая статья помогает принять решение: выбрать язык, курс, формат обучения или вуз.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Локальный контекст</h3>
+          <p>Учитываем особенности Тулы: вузы, спрос на 1С, офлайн-обучение и возможности трудоустройства.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="contact" id="kontakty">
+    <div class="container">
+      <h2>Хотите получать новые статьи?</h2>
+      <p>Подпишитесь на рассылку или запишитесь на бесплатный урок — мы поможем начать ваш путь в IT.</p>
+      <p>г. Тула, ул. Примерная, д. 10</p>
+      <p>Телефон: +7 (900) 123-45-67</p>
+      <a href="#besplatnyy-urok" class="btn" id="besplatnyy-urok">Записаться</a>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Для детей</h3>
+          <ul>
+            <li><a href="/dlya-detej/7-10-let/">7–10 лет</a></li>
+            <li><a href="/dlya-detej/11-14-let/">11–14 лет</a></li>
+            <li><a href="/dlya-detej/15-17-let/">15–17 лет</a></li>
+            <li><a href="/dlya-detej/olimpiady-i-ege/">Олимпиады и ЕГЭ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Для взрослых</h3>
+          <ul>
+            <li><a href="/dlya-vzroslyh/s-nulya/">С нуля</a></li>
+            <li><a href="/dlya-vzroslyh/professii/">Профессии</a></li>
+            <li><a href="/dlya-vzroslyh/s-trudoustroystvom/">С трудоустройством</a></li>
+            <li><a href="/dlya-vzroslyh/besplatnye/">Бесплатные курсы</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Информация</h3>
+          <ul>
+            <li><a href="/kak-stat-programmistom/">Как стать программистом</a></li>
+            <li><a href="/o-nas/">О нас</a></li>
+            <li><a href="/otzyvy/">Отзывы</a></li>
+            <li><a href="/blog/">Блог</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Служебные страницы</h3>
+          <ul>
+            <li><a href="/politika-konfidencialnosti/">Политика конфиденциальности</a></li>
+            <li><a href="/oferta/">Публичная оферта</a></li>
+            <li><a href="/faq/">Часто задаваемые вопросы</a></li>
+            <li><a href="/sitemap/">Карта сайта</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 IT-школа «Код в Туле». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
