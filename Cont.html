@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Контакты — IT-школа «Код в Туле»</title>
+  <meta name="description" content="Контакты IT-школы «Код в Туле»: адрес, телефон, email, форма обратной связи. Запишитесь на бесплатный урок по программированию для детей и взрослых!">
+  <style>
+    /* Общие стили */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fafafa;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #4f46e5;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #4338ca;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #1e1b4b;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    /* Шапка */
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #4f46e5;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: #4b5563;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #4f46e5;
+    }
+
+    /* Контакты */
+    .contact-info {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-info p {
+      font-size: 1.1rem;
+    }
+
+    .contact-form {
+      background: #f9fafb;
+      padding: 40px;
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* Преимущества */
+    .benefits {
+      background: #f9fafb;
+    }
+
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .benefit-item {
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Футер */
+    footer {
+      background: #1e1b4b;
+      color: white;
+      padding: 40px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-column h3 {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      color: white;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column a {
+      color: #cbd5e1;
+      transition: color 0.2s;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #374151;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Код в Туле</div>
+      <nav class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/dlya-detej/">Для детей</a>
+        <a href="/dlya-vzroslyh/">Для взрослых</a>
+        <a href="/napravleniya/">Направления</a>
+        <a href="/kak-stat-programmistom/">Как стать программистом</a>
+        <a href="/blog/">Блог</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Заголовок -->
+  <section class="hero" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 80px 0; text-align: center;">
+    <div class="container">
+      <h1>Контакты</h1>
+      <p>Свяжитесь с нами — мы ответим на все вопросы и запишем вас на бесплатный пробный урок!</p>
+    </div>
+  </section>
+
+  <!-- Информация -->
+  <section class="contact-details">
+    <div class="container">
+      <div class="contact-info">
+        <h2>IT-школа «Код в Туле»</h2>
+        <p><strong>Адрес:</strong> г. Тула, ул. Примерная, д. 10 (офлайн-аудитория в центре города)</p>
+        <p><strong>Телефон:</strong> +7 (900) 123-45-67</p>
+        <p><strong>Email:</strong> info@kodvtule.ru</p>
+        <p><strong>Режим работы:</strong> Пн–Пт: 10:00–20:00, Сб: 10:00–18:00, Вс: выходной</p>
+        <a href="https://vk.com/kodvtule" target="_blank" class="btn" style="margin-top: 20px;">Написать в VK</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Форма -->
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="contact-form">
+        <h2>Оставить заявку</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Ваше имя *</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон *</label>
+            <input type="tel" id="phone" required>
+          </div>
+        
