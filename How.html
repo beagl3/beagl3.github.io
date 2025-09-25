@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Как стать программистом — пошаговый гайд | IT-школа «Код в Туле»</title>
+  <meta name="description" content="Как стать программистом с нуля: что сдавать на программиста, сколько учиться, с чего начать. Гайд для школьников и взрослых. Бесплатный пробный урок в Туле!">
+  <style>
+    /* Общие стили */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fafafa;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #4f46e5;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #4338ca;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #1e1b4b;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    /* Шапка */
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #4f46e5;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: #4b5563;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #4f46e5;
+    }
+
+    /* Статьи */
+    .guides {
+      background: white;
+    }
+
+    .guide-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .guide-card {
+      background: #f0f9ff;
+      border-radius: 12px;
+      padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .guide-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      color: #1e1b4b;
+    }
+
+    /* Преимущества */
+    .benefits {
+      background: #f9fafb;
+    }
+
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .benefit-item {
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Контакты */
+    .contact {
+      background: white;
+      text-align: center;
+    }
+
+    /* Футер */
+    footer {
+      background: #1e1b4b;
+      color: white;
+      padding: 40px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-column h3 {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      color: white;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column a {
+      color: #cbd5e1;
+      transition: color 0.2s;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #374151;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Код в Туле</div>
+      <nav class="nav-links">
+        <a href="/">Главная</a>
+        <a href="/dlya-detej/">Для детей</a>
+        <a href="/dlya-vzroslyh/">Для взрослых</a>
+        <a href="/napravleniya/">Направления</a>
+        <a href="/blog/">Блог</a>
+        <a href="#kontakty">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Заголовок -->
+  <section class="hero" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 80px 0; text-align: center;">
+    <div class="container">
+      <h1>Как стать программистом?</h1>
+      <p>Пошаговый гайд для школьников и взрослых: что сдавать, сколько учиться, с чего начать и как устроиться в IT. Бесплатный пробный урок в Туле!</p>
+      <a href="#besplatnyy-urok" class="btn" style="margin-top: 24px;">Попробовать бесплатно</a>
+    </div>
+  </section>
+
+  <!-- Гайды -->
+  <section class="guides">
+    <div class="container">
+      <h2>Популярные вопросы</h2>
+      <div class="guide-cards">
+        <div class="guide-card">
+          <h3>Что сдавать на программиста?</h3>
+          <p>Если вы школьник — информатика, математика и физика. Подробнее о профильных экзаменах, вузах и альтернативах без ЕГЭ.</p>
+          <a href="/kak-stat-programmistom/chto-sdavat/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+        <div class="guide-card">
+          <h3>Сколько учиться на программиста?</h3>
+          <p>От 3 месяцев до 5 лет — всё зависит от цели: хобби, ЕГЭ, карьера или стартап. Сравниваем колледж, вуз и курсы.</p>
+          <a href="/kak-stat-programmistom/skolko-uchitsya/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+        <div class="guide-card">
+          <h3>С нуля: с чего начать?</h3>
+          <p>Пошаговый план для новичков: выбор языка (Python, Java), установка среды, первые проекты и бесплатные ресурсы.</p>
+          <a href="/kak-stat-programmistom/s-nulya/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Дополнительно -->
+  <section class="extra" style="background: #f9fafb;">
+    <div class="container">
+      <h2>Полезные статьи</h2>
+      <div class="guide-cards" style="margin-top: 40px;">
+        <div class="guide-card" style="background: white;">
+          <h3>Python или Java для школьника?</h3>
+          <p>Сравнение двух языков по сложности, олимпиадам и перспективам.</p>
+          <a href="/blog/python-ili-java/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+        <div class="guide-card" style="background: white;">
+          <h3>Подготовка к ЕГЭ по информатике</h3>
+          <p>Как эффективно готовиться к задачам на программирование и алгоритмы.</p>
+          <a href="/blog/ege-informatika/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+        <div class="guide-card" style="background: white;">
+          <h3>Бесплатные курсы vs платные</h3>
+          <p>Stepik, Яндекс Практикум или IT-школа? Анализ эффективности и ROI.</p>
+          <a href="/blog/besplatnye-ili-platnye/" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Читать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="benefits">
+    <div class="container">
+      <h2>Почему стоит начать с нами?</h2>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <h3>Без «воды»</h3>
+          <p>С первого занятия — реальные задачи, а не теория. Вы уходите с кодом.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Поддержка</h3>
+          <p>Менторы, комьюнити и помощь с выбором пути — даже если вы совсем новичок.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Для всех</h3>
+          <p>Программы адаптированы под школьников (7–17 лет) и взрослых (с нуля и с опытом).</p>
+        </div>
+        <div class="benefit-item">
+          <h3>В Туле</h3>
+          <p>Офлайн-аудитория в центре города + онлайн из любого региона.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="contact" id="kontakty">
+    <div class="container">
+      <h2>Готовы начать свой путь в IT?</h2>
+      <p>Запишитесь на бесплатный урок — мы поможем определиться с направлением и языком.</p>
+      <p>г. Тула, ул. Примерная, д. 10</p>
+      <p>Телефон: +7 (900) 123-45-67</p>
+      <a href="#besplatnyy-urok" class="btn" id="besplatnyy-urok">Записаться</a>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Для детей</h3>
+          <ul>
+            <li><a href="/dlya-detej/7-10-let/">7–10 лет</a></li>
+            <li><a href="/dlya-detej/11-14-let/">11–14 лет</a></li>
+            <li><a href="/dlya-detej/15-17-let/">15–17 лет</a></li>
+            <li><a href="/dlya-detej/olimpiady-i-ege/">Олимпиады и ЕГЭ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Для взрослых</h3>
+          <ul>
+            <li><a href="/dlya-vzroslyh/s-nulya/">С нуля</a></li>
+            <li><a href="/dlya-vzroslyh/professii/">Профессии</a></li>
+            <li><a href="/dlya-vzroslyh/s-trudoustroystvom/">С трудоустройством</a></li>
+            <li><a href="/dlya-vzroslyh/besplatnye/">Бесплатные курсы</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Информация</h3>
+          <ul>
+            <li><a href="/kak-stat-programmistom/">Как стать программистом</a></li>
+            <li><a href="/o-nas/">О нас</a></li>
+            <li><a href="/otzyvy/">Отзывы</a></li>
+            <li><a href="/blog/">Блог</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Служебные страницы</h3>
+          <ul>
+            <li><a href="/politika-konfidencialnosti/">Политика конфиденциальности</a></li>
+            <li><a href="/oferta/">Публичная оферта</a></li>
+            <li><a href="/faq/">Часто задаваемые вопросы</a></li>
+            <li><a href="/sitemap/">Карта сайта</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 IT-школа «Код в Туле». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
