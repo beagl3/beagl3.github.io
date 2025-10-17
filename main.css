@@ -1,0 +1,26 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+/* ... остальной CSS из Blog.txt или index.txt ... */
+
+/* Дополнительно: стили для hero без инлайна */
+.hero {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* Маленькая кнопка */
+.btn.small {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
